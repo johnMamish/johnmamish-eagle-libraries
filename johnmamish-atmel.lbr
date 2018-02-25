@@ -466,7 +466,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="ATSAMD90D14A">
+<deviceset name="ATSAMD09D14A">
 <gates>
 <gate name="G$1" symbol="ATSAMD09D" x="0" y="0"/>
 </gates>
