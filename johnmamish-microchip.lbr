@@ -50,7 +50,7 @@
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -745,6 +745,18 @@
 <wire x1="-5.0038" y1="5.0038" x2="-5.0038" y2="-5.0038" width="0" layer="21"/>
 <text x="-7.5692" y="3.7338" size="1.27" layer="21" ratio="6" rot="SR0">*</text>
 </package>
+<package name="MIC5365-2.8YC5">
+<smd name="P$1" x="0.65" y="0.9" dx="0.4" dy="1" layer="1"/>
+<smd name="P$2" x="0" y="0.9" dx="0.4" dy="1" layer="1"/>
+<smd name="P$3" x="-0.65" y="0.9" dx="0.4" dy="1" layer="1"/>
+<smd name="P$4" x="-0.65" y="-0.9" dx="0.4" dy="1" layer="1"/>
+<smd name="P$5" x="0.65" y="-0.9" dx="0.4" dy="1" layer="1"/>
+<wire x1="-1.1" y1="0.7" x2="1.1" y2="0.7" width="0.127" layer="51"/>
+<wire x1="-1.1" y1="-0.7" x2="1.1" y2="-0.7" width="0.127" layer="51"/>
+<wire x1="-1.1" y1="0.7" x2="-1.1" y2="-0.7" width="0.127" layer="51"/>
+<wire x1="1.1" y1="0.7" x2="1.1" y2="-0.7" width="0.127" layer="51"/>
+<text x="-1.4" y="-0.8" size="0.8" layer="21" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="MCP4131">
@@ -1280,6 +1292,17 @@
 <text x="32.7406" y="9.1186" size="2.0828" layer="95" ratio="6" rot="SR0">REFDES</text>
 <text x="34.3154" y="6.5786" size="2.0828" layer="96" ratio="6" rot="SR0">TYPE</text>
 </symbol>
+<symbol name="MIC5365-2.8YC5">
+<wire x1="0" y1="0" x2="0" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="0" y1="-15.24" x2="17.78" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-15.24" x2="17.78" y2="0" width="0.254" layer="94"/>
+<wire x1="17.78" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="VIN" x="-5.08" y="-2.54" length="middle"/>
+<pin name="GND" x="-5.08" y="-7.62" length="middle"/>
+<pin name="EN" x="-5.08" y="-12.7" length="middle"/>
+<pin name="NC" x="22.86" y="-12.7" length="middle" rot="R180"/>
+<pin name="VOUT" x="22.86" y="-2.54" length="middle" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="MCP4131-103E/SN-ND">
@@ -1641,6 +1664,25 @@
 <connect gate="B" pin="VSS_2" pad="9"/>
 <connect gate="B" pin="VSS_3" pad="25"/>
 <connect gate="B" pin="VSS_4" pad="41"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MIC5365-2.8YC5">
+<gates>
+<gate name="G$1" symbol="MIC5365-2.8YC5" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MIC5365-2.8YC5">
+<connects>
+<connect gate="G$1" pin="EN" pad="P$3"/>
+<connect gate="G$1" pin="GND" pad="P$2"/>
+<connect gate="G$1" pin="NC" pad="P$4"/>
+<connect gate="G$1" pin="VIN" pad="P$1"/>
+<connect gate="G$1" pin="VOUT" pad="P$5"/>
 </connects>
 <technologies>
 <technology name=""/>
