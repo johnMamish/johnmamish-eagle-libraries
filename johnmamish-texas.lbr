@@ -531,7 +531,7 @@
 <gate name="G$1" symbol="SN74LV1T00DCKR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="TI_SOT-23-5">
+<device name="" package="DCK_R-PDSO-G5">
 <connects>
 <connect gate="G$1" pin="A" pad="P$1"/>
 <connect gate="G$1" pin="B" pad="P$2"/>
